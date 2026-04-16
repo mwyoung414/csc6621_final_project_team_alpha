@@ -16,9 +16,13 @@
 ![Protein Structures](protein_structure.png)
 
 ## ML/DL Tasks
-- SidechainNet dataset comes in a pickle file that is dictionary with a train, test and validation sets
+- the scn_load function will download the dataset (if slow you directly download the dataset from here: [http://bits.csb.pitt.edu/~jok120/sidechainnet_data/sidechainnet_casp12_30.pkl](http://bits.csb.pitt.edu/~jok120/sidechainnet_data/sidechainnet_casp12_30.pkl)) (3.36GB)
+    - create a folder named 'data' where the final_project.ipynb is located and put the 'casp12_30.pk1' file in that folder
 
-## Datasets
+- Baseline model: BiLSTM (Bi-Directional LSTM)
+    - [https://keras.io/api/layers/recurrent_layers/bidirectional/](https://keras.io/api/layers/recurrent_layers/bidirectional/)
+
+## Dataset Information
 ### SidechainNet 
 - SidechainNet dataset comes in a pickle file that is dictionary with a train, test and validation sets
 - validation sets: valid-10, valid-20, valid-30, valid-40, valid-50, valid-70, valid-90
@@ -41,7 +45,7 @@
     - mod: modified sequence of the protein (sequence with modifications or padding applied)
 
 
-### ProteinNet
+### ProteinNet (Precursor to SidechainNet)
 - Standardized dataset for ML of Protein Structures
 - Provides training models a map of protein sequences to their 3D structure
 - Created from the <I>Critical Assessment of protein Structure Prediction (CASP)</I> dataset: [https://predictioncenter.org/](https://predictioncenter.org/)
