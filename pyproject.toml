@@ -1,0 +1,12 @@
+[project]
+name = "6621-final-project-team-alpha"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ipykernel>=7.2.0",
+    "openmm>=8.5.1",
+    "setuptools<82",
+    "sidechainnet>=1.0.1",
+]

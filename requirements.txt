@@ -1,0 +1,13 @@
+keras
+sidechainnet
+prody
+biopython
+setuptools<82.0.0
+numpy
+scipy
+tqdm
+pandas
+matplotlib
+jupyter
+ipykernel
+py3Dmol

@@ -1,0 +1,47 @@
+# Introduction
+
+## Proteins Overview
+- essential macronutrients used by the body to provide neccessary biological functions for life
+- Made up of 20 amino acids, that determine it's 3D structure which is closely tied to that protein's function
+    - Amino Acid -> Protein Sequence -> Protein 3D Structure -> Protein Function
+- Protein Structure
+    - Primary Structure - Sequence of Amino Acids (mental picture: a long ribbon)
+    - Secondary Structure - How the Primary structure folds, twists, bends, or zig-zags (mental picture: that long ribbon twisting and turning)
+        - Alpha Helices ($\alpha$-<b>helices</b>)
+        - Beta Sheets ($\beta$-<b>sheets</b>)
+    - Tertiary Structure - The complete 3D shape of amino acid chains (polypeptides)
+        - $\alpha$-helices and $\beta$-sheets packed together
+    - Quaternary Structure (optional: not all proteins have this structure)
+
+![Protein Structures](protein_structure.png)
+
+## ML/DL Tasks
+- SidechainNet dataset comes in a pickle file that is dictionary with a train, test and validation sets
+
+## Datasets
+### SidechainNet 
+- SidechainNet dataset comes in a pickle file that is dictionary with a train, test and validation sets
+- validation sets: valid-10, valid-20, valid-30, valid-40, valid-50, valid-70, valid-90
+    - values define how similar the proteins are in comparision to the train set, valid-10 being only 10% similar and valid-90 being 90% similar => valid-10 is the hardest val set and valid-90 is the easiet
+- Input variables for each protein in the dataset
+    - seq: amino acid sequence of the protein
+    - evo: evolutionary information (position-specific scoring matrix) for the protein sequence, describes how each position in the sequence is conserved across different species
+    - msk: used to pad the sequences to a fixed length since sequences can have varying lengths, indicates which positions in the sequence are valid (1) and which are padding (0)
+
+- Target variables for each protein in the dataset
+    - ang: 3D coordinates of the protein backbone and sidechain atoms
+    - crd: 3D coordinates of the protein backbone atoms (N, CA, C)
+    - sec: secondary structure information for the protein sequence
+
+
+- Metadata variables for each protein in the dataset
+    - ids: unique identifier for the protein from the Protein Data Bank (PDB)
+    - res: resolution of the protein structure (in Angstroms), lower means higher quality structure
+    - ums: unmodified sequence of the protein (original sequence without any modifications or padding)
+    - mod: modified sequence of the protein (sequence with modifications or padding applied)
+
+
+### ProteinNet
+- Standardized dataset for ML of Protein Structures
+- Provides training models a map of protein sequences to their 3D structure
+- Created from the <I>Critical Assessment of protein Structure Prediction (CASP)</I> dataset: [https://predictioncenter.org/](https://predictioncenter.org/)
