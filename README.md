@@ -45,3 +45,28 @@
 - Standardized dataset for ML of Protein Structures
 - Provides training models a map of protein sequences to their 3D structure
 - Created from the <I>Critical Assessment of protein Structure Prediction (CASP)</I> dataset: [https://predictioncenter.org/](https://predictioncenter.org/)
+
+## Amino Acid Abbreviations
+
+| Amino Acid | 3-Letter | 1-Letter |
+| :--- | :--- | :--- |
+| Alanine | Ala | A |
+| Arginine | Arg | R |
+| Asparagine | Asn | N |
+| Aspartic Acid | Asp | D |
+| Cysteine | Cys | C |
+| Glutamine | Gln | Q |
+| Glutamic Acid | Glu | E |
+| Glycine | Gly | G |
+| Histidine | His | H |
+| Isoleucine | Ile | I |
+| Leucine | Leu | L |
+| Lysine | Lys | K |
+| Methionine | Met | M |
+| Phenylalanine | Phe | F |
+| Proline | Pro | P |
+| Serine | Ser | S |
+| Threonine | Thr | T |
+| Tryptophan | Trp | W |
+| Tyrosine | Tyr | Y |
+| Valine | Val | V |
