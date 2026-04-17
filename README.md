@@ -15,10 +15,19 @@
 
 ![Protein Structures](protein_structure.png)
 
-## ML/DL Tasks
-- SidechainNet dataset comes in a pickle file that is dictionary with a train, test and validation sets
+<I>A common way to describe the structure of a protein is to divide it into two separate components–the backbone and the sidechains that extend from it. The protein backbone is a linear chain of nitrogen, carbon, and oxygen atoms. The torsional angles ($\Phi$, $\Psi$, and $\Omega$) that connect these atoms form the overall shape of the protein. In contrast, protein sidechains are chemical groups of zero to ten heavy atoms connected to the central α-carbon of each amino acid residue. Each of the twenty distinct amino acids is defined by the unique structure and chemical composition of its sidechain component. Consequently, each protein is defined by the unique sequence of its constituent amino acids. The precise orientation of amino acid sidechains is critical to the biochemical function of proteins. Enzyme catalysis, drug binding, and protein-protein interactions all depend on a level of atomic precision that is not accounted for in backbone structure alone. Thus, the protein backbone and sidechain are both crucially important to protein structure and function.</I> - [King, Koes (2022)](https://pmc.ncbi.nlm.nih.gov/articles/PMC8492522/)
 
-## Datasets
+## ML/DL Tasks
+- the scn_load function will download the dataset (if slow you directly download the dataset from here: [http://bits.csb.pitt.edu/~jok120/sidechainnet_data/sidechainnet_casp12_30.pkl](http://bits.csb.pitt.edu/~jok120/sidechainnet_data/sidechainnet_casp12_30.pkl)) (3.36GB)
+    - create a folder named 'data' where the final_project.ipynb is located and put the 'casp12_30.pk1' file in that folder
+
+- Baseline model: BiLSTM (Bi-Directional LSTM)
+    - [https://keras.io/api/layers/recurrent_layers/bidirectional/](https://keras.io/api/layers/recurrent_layers/bidirectional/)
+
+### Goal
+    - Predict 'angles' from the sequence
+
+## Dataset Information
 ### SidechainNet 
 - SidechainNet dataset comes in a pickle file that is dictionary with a train, test and validation sets
 - validation sets: valid-10, valid-20, valid-30, valid-40, valid-50, valid-70, valid-90
@@ -41,7 +50,32 @@
     - mod: modified sequence of the protein (sequence with modifications or padding applied)
 
 
-### ProteinNet
+### ProteinNet (Precursor to SidechainNet)
 - Standardized dataset for ML of Protein Structures
 - Provides training models a map of protein sequences to their 3D structure
 - Created from the <I>Critical Assessment of protein Structure Prediction (CASP)</I> dataset: [https://predictioncenter.org/](https://predictioncenter.org/)
+
+## Amino Acid Abbreviations
+
+| Amino Acid | 3-Letter | 1-Letter |
+| :--- | :--- | :--- |
+| Alanine | Ala | A |
+| Arginine | Arg | R |
+| Asparagine | Asn | N |
+| Aspartic Acid | Asp | D |
+| Cysteine | Cys | C |
+| Glutamine | Gln | Q |
+| Glutamic Acid | Glu | E |
+| Glycine | Gly | G |
+| Histidine | His | H |
+| Isoleucine | Ile | I |
+| Leucine | Leu | L |
+| Lysine | Lys | K |
+| Methionine | Met | M |
+| Phenylalanine | Phe | F |
+| Proline | Pro | P |
+| Serine | Ser | S |
+| Threonine | Thr | T |
+| Tryptophan | Trp | W |
+| Tyrosine | Tyr | Y |
+| Valine | Val | V |
