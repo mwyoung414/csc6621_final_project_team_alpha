@@ -10,5 +10,5 @@ wheels/
 .venv
 
 data/
-Review.md
+local/
 casp12_30.pkl
