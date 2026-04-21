@@ -11,4 +11,7 @@ wheels/
 
 data/
 local/
+sidechainnet_data/
 casp12_30.pkl
+final_project_colab.ipynb
+
